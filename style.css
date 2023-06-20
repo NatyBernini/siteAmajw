@@ -1,0 +1,569 @@
+/* Variáveis */
+:root {
+    --PGreen: #253c5d;
+    --SGreen: #dfe1e1;
+    --PBlue: #668fbb;
+    --SBlue: #597ba1;
+    --PGray: #acacac;
+    --SGray: #333;
+    --TGray: #999;
+    --White: #fff;
+    --SWhite : #eee;
+    --Black: #000;
+    --Shadow: #3bbeb413;
+    --Border: rgba(0,0,0,.3);
+}
+
+/* Resetar as configurações da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--SGray);
+    padding: 1rem;
+    margin: 2rem 0;
+    background: var(--SGreen);
+}
+
+.heading span {
+    color: var(--PGreen);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--SGray);
+    color: var(--White);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--SBlue);
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--White);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem var(--Shadow);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: var(--PGreen);
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--PBlue);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: var(--PGray);
+}
+
+header .navbar a:hover {
+    color: var(--PGreen);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--PGray);
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--PBlue);
+}
+
+/* Menu mobile */
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--PGray);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid var(--Border);
+    display: none;
+}
+
+/* Fim Menu mobile*/
+/* Fim Cabeçalho */
+
+/* Home Section */
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url("imagens/PlanoFundo.png")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: var(--SGray);
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--PGreen);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: var(--SGray);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid var(--White);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem var(--Shadow);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: var(--White);
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: var(--SGray);
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: var(--PGray);
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.about .row .content span{
+    color: var(--PBlue);
+}
+
+/* Fim Home Section */
+
+
+/* Icon Section */
+
+.icons-container {
+    background: var(--SWhite);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: var(--White);
+    border: .1rem solid var(--Shadow);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons:hover {
+    transform: translateY(-10%);
+    box-shadow: 0 .5rem 1rem var(--SGreen);
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: var(--PGreen);
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color: var(--SGray);
+    font-size: 1.3rem;
+}
+
+/* Fim Icon Section */
+
+/* Produtos */
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem var(--Shadow);
+    border-radius: .5rem;
+    border: .1rem solid var(--Shadow);
+    position: relative;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+}
+
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--PGreen);
+    color: var(--White);
+}
+
+.products .box-container .box .image .icons a img {
+    height: 4rem;
+    padding-top: 10%;
+}
+
+
+.products .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid var(--PGray);
+    border-right: .1rem solid var(--PGray);
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover {
+    background: var(--PGray);
+}
+
+/* Fim Produtos */
+
+/* Review */
+
+.review .equipe span {
+    color: var(--PGreen);
+}
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem var(--SGreen);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: .1rem solid var(--Shadow);
+}
+
+.review .box-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 .5rem 1.5rem var(--Border);
+}
+
+.review .box-container .box .fa-quote-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;    
+}
+
+.review .box-container .box .stars i {
+    color: var(--PGreen);
+    font-size: 2rem;
+}
+
+.review .box-container .box p {
+    color: var(--TGray);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3 {
+    font-size: 2rem;
+    color: var(--SGray);
+}
+
+.review .box-container .box .user span {
+    font-size: 1.5rem;
+    color: var(--TGray);
+}
+
+.review .box-container .equipe {
+    padding-left: 4rem;
+}
+
+.review .equipe .titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--SGray);
+    margin-bottom: 1.5rem;
+}
+
+.review .equipe .educador .subtitulo {
+    font-size: 1.8rem;
+    color: var(--SGray);
+    margin-top: 2rem;
+}
+
+.review .equipe li {
+    color: var(--TGray);
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+.review .feedback {
+    margin-top: 5rem;
+}
+
+/* Fim Review */
+
+/* Footer */
+
+.footer {
+    margin-top: 15rem;
+    border-top: .1rem solid var(--Border);
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: var(--SGray);
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: var(--PGray);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--PGreen);
+    text-decoration: underline;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--SGray);
+    border-top: .1rem solid var(--Shadow);
+}
+
+.footer .credit span {
+    color: var(--PGreen);
+}
+
+
+/* Fim Footer */
+
+/* Media Queries */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    
+}
+
+@media (max-width:768px) {
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--PGray);
+        border-top: .1rem solid var(--Shadow);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  /* Faz o menu mobile não aparecer */
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  /* Faz o menu mobile aparecer */
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: var(--White);
+        border: .1rem solid var(--Shadow);
+        display: block;
+    }
+
+    .home {
+        background-position: left;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+    
+    .heading {
+        font-size: 3rem;
+    }
+
+}
