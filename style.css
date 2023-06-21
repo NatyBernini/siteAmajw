@@ -321,7 +321,7 @@ header .fa-bars {
 
 .products .box-container .box .image .icons a img {
     height: 4rem;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 
@@ -472,6 +472,9 @@ header .fa-bars {
     text-decoration: underline;
 }
 
+.footer .box-container .box img {
+    width: 100%;
+}
 .footer .credit {
     text-align: center;
     padding: 1.5rem;
